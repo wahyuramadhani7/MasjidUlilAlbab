@@ -1,118 +1,180 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Masjid Ibnu Sina - Kajian</title>
+  <title>Masjid Ulil Albab - Kajian</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f2f2f2;
+      box-sizing: border-box;
     }
 
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f2f2f2;
+    }
+    
     header {
       background-color: #ffffff;
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      position: fixed;
+      padding: 1rem;
+      position: sticky;
       top: 0;
       left: 0;
       right: 0;
       z-index: 999;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-
+    
     h1 {
       margin: 0;
-      color: #333333;
-      font-size: 24px;
+      color: #1e3a8a;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    nav {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
     }
 
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+    
     nav ul {
       list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: right;
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+      white-space: nowrap;
     }
-
-    nav ul li {
-      display: inline;
-      margin-left: 15px;
-    }
-
+    
     nav ul li a {
       text-decoration: none;
       color: #333333;
       font-weight: bold;
-    }
-
-    .donasi {
-      background-color: #ff6600;
-      color: #ffffff;
-      padding: 8px 16px;
+      padding: 0.5rem 1rem;
       border-radius: 4px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
     }
-
+    
+    nav ul li a:hover, nav ul li a.active {
+      background-color: #1e3a8a;
+      color: #ffffff;
+    }
+    
+    .donasi {
+      background-color: #3b82f6;
+      color: #ffffff;
+    }
+    
     main {
-      padding: 40px;
-      background-color: #ffffff;
-      margin: 80px auto;
+      padding: 1rem;
       max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .section {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem auto;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-
+    
     h2 {
-      color: #333333;
-      font-size: 32px;
-      margin-top: 0;
+      color: #1e3a8a;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
       text-align: center;
     }
 
     h3 {
-      color: #333333;
-      font-size: 24px;
-      margin-bottom: 10px;
+      color: #1e3a8a;
+      font-size: 1.2rem;
+      margin: 1rem 0;
     }
-
+    
     p {
-      color: #666666;
-      line-height: 1.5;
+      color: #4a5568;
+      margin-bottom: 1rem;
+      line-height: 1.7;
+      font-size: 1rem;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
+      margin: 1rem 0;
+      background: white;
     }
-
+    
     th, td {
-      padding: 12px;
+      padding: 1rem;
       text-align: left;
       border-bottom: 1px solid #dddddd;
+      font-size: 0.9rem;
     }
-
+    
     th {
-      background-color: #f2f2f2;
+      background-color: #1e3a8a;
+      color: #ffffff;
       font-weight: bold;
     }
-
+    
     tr:nth-child(even) {
-      background-color: #f9f9f9;
+      background-color: #f8fafc;
     }
-
+    
     tr:hover {
-      background-color: #ebebeb;
+      background-color: #f1f5f9;
     }
-
-    .section {
-      margin-top: 40px;
-    }
-
+    
     footer {
-      background-color: #333333;
+      background-color: #1e3a8a;
       color: #ffffff;
-      padding: 20px;
+      padding: 1rem;
       text-align: center;
+      font-size: 0.8rem;
+      margin-top: 2rem;
+    }
+    
+    @media screen and (max-width: 768px) {
+      nav ul {
+        justify-content: start;
+      }
+      
+      .section {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      nav ul li a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+      }
+      
+      main {
+        padding: 0.5rem;
+      }
+
+      th, td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.8rem;
+      }
     }
   </style>
 </head>
@@ -123,7 +185,7 @@
       <ul>
         <li><a href="index.html">Beranda</a></li>
         <li><a href="profil.html">Profil</a></li>
-        <li><a href="kajian.html">Kajian</a></li>
+        <li><a href="kajian.html" class="active">Kajian</a></li>
         <li><a href="fasilitas.html">Fasilitas</a></li>
         <li><a href="berita.html">Berita</a></li>
         <li><a href="kontak.html">Contact Us</a></li>
@@ -131,8 +193,53 @@
       </ul>
     </nav>
   </header>
-
+  
   <main>
     <section id="kajian" class="section">
       <h2>Kajian di Masjid Ulil Albab</h2>
-      <p>Masjid Ulil Albab rutin mengadakan kajian keislaman yang diisi oleh para ustadz dan ulama ternama. Kajian ini terbuka untuk umum dan bertujuan untuk meningkatkan pemahaman dan pengetah
+      <p>Masjid Ulil Albab rutin mengadakan kajian keislaman yang diisi oleh para ustadz dan ulama ternama. Kajian ini terbuka untuk umum dan bertujuan untuk meningkatkan pemahaman dan pengetahuan agama bagi masyarakat.</p>
+      
+      <h3>Jadwal Kajian Rutin</h3>
+      <table>
+        <tr>
+          <th>Hari</th>
+          <th>Waktu</th>
+          <th>Pemateri</th>
+          <th>Tema</th>
+        </tr>
+        <tr>
+          <td>Senin</td>
+          <td>Ba'da Maghrib</td>
+          <td>Ust. Ahmad Muzaki</td>
+          <td>Fiqih Kontemporer</td>
+        </tr>
+        <tr>
+          <td>Rabu</td>
+          <td>Ba'da Subuh</td>
+          <td>Ust. Abdul Rahman</td>
+          <td>Tafsir Al-Qur'an</td>
+        </tr>
+        <tr>
+          <td>Jumat</td>
+          <td>Ba'da Isya</td>
+          <td>Ust. Muhammad Ridwan</td>
+          <td>Hadits Arbain</td>
+        </tr>
+        <tr>
+          <td>Ahad</td>
+          <td>09.00 - 11.00</td>
+          <td>Dr. Adi Hidayat, Lc., M.A.</td>
+          <td>Sirah Nabawiyah</td>
+        </tr>
+      </table>
+
+      <h3>Kajian Spesial Ramadhan</h3>
+      <p>Selama bulan Ramadhan, kami mengadakan kajian khusus setiap hari setelah sholat tarawih. Kajian ini akan membahas berbagai tema seputar ibadah dan amalan di bulan Ramadhan.</p>
+    </section>
+  </main>
+  
+  <footer>
+    &copy; 2023 Masjid Ulil Albab. All rights reserved.
+  </footer>
+</body>
+</html>
