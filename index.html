@@ -10,7 +10,7 @@
       padding: 0;
       background-color: #f2f2f2;
     }
-
+    
     header {
       background-color: #ffffff;
       padding: 20px;
@@ -21,53 +21,53 @@
       right: 0;
       z-index: 999;
     }
-
+    
     h1 {
       margin: 0;
       color: #333333;
       font-size: 24px;
     }
-
+    
     nav ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
       text-align: right;
     }
-
+    
     nav ul li {
       display: inline;
       margin-left: 15px;
     }
-
+    
     nav ul li a {
       text-decoration: none;
       color: #333333;
       font-weight: bold;
     }
-
+    
     .donasi {
       background-color: #ff6600;
       color: #ffffff;
       padding: 8px 16px;
       border-radius: 4px;
     }
-
+    
     main {
       padding: 40px;
       background-color: #ffffff;
       margin: 80px auto;
-      max-width: 800px;
+      max-width: 90%;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-
+    
     h2 {
       color: #333333;
       font-size: 32px;
       margin-top: 0;
       text-align: center;
     }
-
+    
     img {
       max-width: 100%;
       height: auto;
@@ -77,41 +77,69 @@
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-
+    
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
     }
-
+    
     th, td {
       padding: 12px;
       text-align: left;
       border-bottom: 1px solid #dddddd;
     }
-
+    
     th {
       background-color: #f2f2f2;
       font-weight: bold;
     }
-
+    
     tr:nth-child(even) {
       background-color: #f9f9f9;
     }
-
+    
     tr:hover {
       background-color: #ebebeb;
     }
-
+    
     .section {
       margin-top: 40px;
     }
-
+    
     footer {
       background-color: #333333;
       color: #ffffff;
       padding: 20px;
       text-align: center;
+    }
+    
+    @media screen and (max-width: 600px) {
+      header {
+        padding: 10px;
+      }
+      
+      h1 {
+        font-size: 20px;
+      }
+      
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+      
+      main {
+        padding: 20px;
+        margin: 60px auto;
+      }
+      
+      h2 {
+        font-size: 24px;
+      }
+      
+      table {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
@@ -164,7 +192,7 @@
       </table>
     </section>
   </main>
-
+  
   <footer>
     &copy; 2023 Masjid Ulil Albab. All rights reserved.
   </footer>
